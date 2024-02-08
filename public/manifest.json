@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Font Size Changer",
+  "version": "1.0",
+  "description": "Change font size of current page",
+  "permissions": [
+    "scripting",
+    "activeTab"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "assets/background.js"
+  }
+}
