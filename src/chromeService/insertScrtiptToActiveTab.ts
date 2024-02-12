@@ -1,4 +1,4 @@
-export const inertScrtiptToActiveTab = async (
+export const insertScrtiptToActiveTab = async (
   func: (...args: any[]) => void,
   args: any[],
 ) => {

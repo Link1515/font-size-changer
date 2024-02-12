@@ -1,1 +1,1 @@
-export * from './inertScrtiptToActiveTab';
+export * from './insertScrtiptToActiveTab';
