@@ -1,16 +1,19 @@
 import '~/style.css';
 import { getHtmlElement } from '~/utils';
-import { modifyFontSize } from '~/funcs';
-import { inertScrtiptToAllTabs } from '~/chromeService';
+import { modifyZoom } from '~/funcs';
+import { insertScrtiptToActiveTab } from '~/chromeService';
 
 const increaseBtnEl = getHtmlElement<HTMLButtonElement>('#increaseBtn');
-
-increaseBtnEl.addEventListener('click', async () => {
-  inertScrtiptToAllTabs(modifyFontSize, ['increase']);
+increaseBtnEl.addEventListener('click', () => {
+  insertScrtiptToActiveTab(modifyZoom, ['increase']);
 });
 
 const decreaseBtnEl = getHtmlElement<HTMLButtonElement>('#decreaseBtn');
+decreaseBtnEl.addEventListener('click', () => {
+  insertScrtiptToActiveTab(modifyZoom, ['decrease']);
+});
 
-decreaseBtnEl.addEventListener('click', async () => {
-  inertScrtiptToAllTabs(modifyFontSize, ['decrease']);
+const resetBtnEl = getHtmlElement<HTMLButtonElement>('#resetBtn');
+resetBtnEl.addEventListener('click', () => {
+  insertScrtiptToActiveTab(modifyZoom, ['reset']);
 });
