@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "Font Size Changer",
+  "name": "Zoom Helper",
   "version": "1.0",
-  "description": "Change font size of current page",
+  "description": "Change zoom of current page",
   "permissions": [
     "scripting",
     "activeTab"
