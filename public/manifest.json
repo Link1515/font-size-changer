@@ -5,7 +5,8 @@
   "description": "Change font size of current page",
   "permissions": [
     "scripting",
-    "activeTab"
+    "activeTab",
+    "tabs"
   ],
   "action": {
     "default_popup": "popup.html"
