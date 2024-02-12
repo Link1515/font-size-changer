@@ -11,6 +11,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: 'popup.html',
+        contentScript: path.resolve(__dirname, 'src', 'contentScript.ts'),
       },
       output: {
         entryFileNames: 'assets/[name].js',

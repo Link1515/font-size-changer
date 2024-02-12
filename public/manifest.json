@@ -5,10 +5,19 @@
   "description": "Change font size of current page",
   "permissions": [
     "scripting",
-    "activeTab",
-    "tabs"
+    "activeTab"
   ],
   "action": {
     "default_popup": "popup.html"
-  }
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*/*"
+      ],
+      "js": [
+        "assets/contentScript.js"
+      ]
+    }
+  ]
 }
