@@ -14,11 +14,14 @@ export const modifyZoom = (flag: 'increase' | 'decrease' | 'reset') => {
   }
 
   const zoomString = (currentZoom / 10).toString();
-  document.body.style.zoom = zoomString;
 
-  currentZoom === 1
-    ? localStorage.removeItem('zoomHelperZoom')
-    : localStorage.setItem('zoomHelperZoom', zoomString);
+  if (zoomString === '1') {
+    document.body.style.zoom = '';
+    localStorage.removeItem('zoomHelperZoom');
+  } else {
+    document.body.style.zoom = zoomString;
+    localStorage.setItem('zoomHelperZoom', zoomString);
+  }
 
   return zoomString;
 };
