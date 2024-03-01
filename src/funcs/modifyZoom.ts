@@ -1,25 +1,24 @@
 export const modifyZoom = (flag: 'increase' | 'decrease' | 'reset') => {
-  const currentZoom = parseFloat(document.body.style.zoom || '1');
+  let currentZoom = parseFloat(document.body.style.zoom || '1') * 10;
 
   switch (flag) {
     case 'increase':
-      document.body.style.zoom = (currentZoom + 0.1).toString();
+      currentZoom++;
       break;
     case 'decrease':
-      document.body.style.zoom = (currentZoom - 0.1).toString();
+      currentZoom--;
       break;
     case 'reset':
-      document.body.style.zoom = '';
+      currentZoom = 10;
       break;
   }
 
-  if (document.body.style.zoom === '1') {
-    document.body.style.zoom = '';
-  }
+  const zoomString = (currentZoom / 10).toString();
+  document.body.style.zoom = zoomString;
 
-  !document.body.style.zoom
+  currentZoom === 1
     ? localStorage.removeItem('zoomHelperZoom')
-    : localStorage.setItem('zoomHelperZoom', document.body.style.zoom);
+    : localStorage.setItem('zoomHelperZoom', zoomString);
 
-  return document.body.style.zoom;
+  return zoomString;
 };
