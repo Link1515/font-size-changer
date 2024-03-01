@@ -35,14 +35,20 @@ const resetBtnEl = getHtmlElement<HTMLButtonElement>('#resetBtn');
 
 const plusImgEl = document.createElement('img');
 plusImgEl.src = iconPlus;
+plusImgEl.width = 24;
+plusImgEl.height = 24;
 increaseBtnEl.appendChild(plusImgEl);
 
 const minusImgEl = document.createElement('img');
 minusImgEl.src = iconMinus;
+minusImgEl.width = 24;
+minusImgEl.height = 24;
 decreaseBtnEl.appendChild(minusImgEl);
 
 const resetImgEl = document.createElement('img');
 resetImgEl.src = iconReset;
+resetImgEl.width = 24;
+resetImgEl.height = 24;
 resetBtnEl.appendChild(resetImgEl);
 
 // bind button action
