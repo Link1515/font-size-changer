@@ -7,10 +7,12 @@ export const insertScrtiptToActiveTab = async (
     lastFocusedWindow: true,
   });
 
-  if (!tab.id) return;
-  await chrome.scripting.executeScript({
+  if (!tab || !tab.id) return;
+  const results = await chrome.scripting.executeScript({
     target: { tabId: tab.id },
     func,
     args,
   });
+
+  return results[0].result;
 };

@@ -5,18 +5,17 @@ export const modifyZoom = (flag: 'increase' | 'decrease' | 'reset') => {
 
   const currentZoom = parseFloat(document.body.style.zoom);
 
-  if (flag === 'increase') {
-    document.body.style.zoom = (currentZoom + 0.1).toString();
-    return;
+  switch (flag) {
+    case 'increase':
+      document.body.style.zoom = (currentZoom + 0.1).toString();
+      break;
+    case 'decrease':
+      document.body.style.zoom = (currentZoom - 0.1).toString();
+      break;
+    case 'reset':
+      document.body.style.zoom = '1';
+      break;
   }
 
-  if (flag === 'decrease') {
-    document.body.style.zoom = (currentZoom - 0.1).toString();
-    return;
-  }
-
-  if (flag === 'reset') {
-    document.body.style.zoom = '1';
-    return;
-  }
+  return document.body.style.zoom;
 };
