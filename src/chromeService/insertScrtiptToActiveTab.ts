@@ -1,6 +1,6 @@
 export const insertScrtiptToActiveTab = async (
   func: (...args: any[]) => void,
-  args: any[],
+  args?: any[],
 ) => {
   const [tab] = await chrome.tabs.query({
     active: true,

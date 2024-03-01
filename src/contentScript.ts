@@ -1,7 +1,5 @@
-// chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
-//   if (changeInfo.url) {
-//     console.log('url change');
-//   }
-// });
+const zoom = localStorage.getItem('zoomHelperZoom');
 
-console.log(chrome.tabs);
+if (zoom) {
+  document.body.style.zoom = zoom;
+}
