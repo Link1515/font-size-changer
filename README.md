@@ -14,6 +14,8 @@ This chrome extension helps users adjust zoom for different domains!
 
 `cd zoom-helper`
 
+`pnpm i`
+
 `pnpm build`
 
 ### STEP 3: load package to chrome
