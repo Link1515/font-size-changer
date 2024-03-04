@@ -5,6 +5,7 @@ import { insertScrtiptToActiveTab } from '~/chromeService';
 import iconPlus from '~/assets/images/icons/plus.svg';
 import iconMinus from '~/assets/images/icons/minus.svg';
 import iconReset from '~/assets/images/icons/reset.svg';
+import iconEyes from '~/assets/images/icons/eyes.svg';
 
 /**
  * ===================
@@ -67,3 +68,12 @@ resetBtnEl.addEventListener('click', () => {
   insertScrtiptToActiveTab(modifyZoom, ['reset']);
   zoomDisplayEl.innerText = '1';
 });
+
+/**
+ * =============
+ * put the logo
+ * =============
+ */
+
+const logoEl = getHtmlElement<HTMLImageElement>('#logo');
+logoEl.src = iconEyes;
