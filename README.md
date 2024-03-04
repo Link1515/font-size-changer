@@ -16,9 +16,9 @@ This chrome extension helps users adjust zoom for different domains!
 
 ### STEP 3: load package to chrome
 
-Go to [chrome://extensions](chrome://extensions), and switch to developer mode (the switch is in the upper right corner of the screen)
+Go to <a href="chrome://extensions">chrome://extensions</a>, and switch to developer mode (the switch is in the upper right corner of the screen)
 
-Click "load uppacked" button, and select the dist directory which you build in step 2
+Click "load unpacked" button, and select the dist directory which you build in step 2
 
 ### STEP 4: pin the extension and use it
 
